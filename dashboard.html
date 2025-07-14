@@ -43,16 +43,12 @@
   </div>
 
   <script src="js/plants.js"></script>
+  <script src="js/mock-data.js"></script>
   <script>
     const plantName = localStorage.getItem('selectedPlant') || 'گیاه ناشناس';
     document.getElementById('plant-name').textContent = 🌿 ${plantName};
 
-    // داده فرضی موقتی (به‌جای اتصال به دستگاه)
-    const data = {
-      temperature: 24,
-      humidity: 60,
-      light: 300,
-      soil: 45
+    const data = generatemockdata();
     };
 
     document.getElementById('temp').textContent = data.temperature + ' °C';
