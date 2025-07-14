@@ -1,1 +1,14 @@
-
+<div class="plants-list">
+  <div class="plant-item">
+    <img src="assets/img/aros-barg.jpg.jpg" alt="عروس برگ مشکی" class="rounded-lg shadow-md" />
+    <p>عروس برگ مشکی</p>
+  </div>
+  <div class="plant-item">
+    <img src="assets/img/naz.jpg.jpg" alt="نازبو" class="rounded-lg shadow-md" />
+    <p>نازبو</p>
+  </div>
+  <div class="plant-item">
+    <img src="assets/img/alale.jpg.jpg" alt="گل آلاله" class="rounded-lg shadow-md" />
+    <p>گل آلاله</p>
+  </div>
+</div>
