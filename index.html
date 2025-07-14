@@ -19,24 +19,20 @@
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
   <h1 class="text-3xl font-bold text-pink-600 mb-8">🌱 یکی از گیاه‌هات رو انتخاب کن</h1>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-    <!-- Plant 1 -->
-    <div class="plant-card bg-white rounded-2xl shadow-xl p-4 flex flex-col items-center cursor-pointer" onclick="selectPlant('عروس برگ مشکی')">
-      <img src="https://cdn.pixabay.com/photo/2021/09/21/06/44/begonia-6641141_1280.jpg" alt="عروس برگ مشکی" class="w-40 h-40 rounded-xl object-cover mb-4">
-      <h2 class="text-lg font-semibold text-gray-700">عروس برگ مشکی</h2>
-    </div>
-
-    <!-- Plant 2 -->
-    <div class="plant-card bg-white rounded-2xl shadow-xl p-4 flex flex-col items-center cursor-pointer" onclick="selectPlant('نازبو')">
-      <img src="https://cdn.pixabay.com/photo/2015/05/26/16/31/basil-784949_1280.jpg" alt="نازبو" class="w-40 h-40 rounded-xl object-cover mb-4">
-      <h2 class="text-lg font-semibold text-gray-700">نازبو</h2>
-    </div>
-
-    <!-- Plant 3 -->
-    <div class="plant-card bg-white rounded-2xl shadow-xl p-4 flex flex-col items-center cursor-pointer" onclick="selectPlant('گل آلاله')">
-      <img src="https://cdn.pixabay.com/photo/2020/02/06/15/12/ranunculus-4824794_1280.jpg" alt="گل آلاله" class="w-40 h-40 rounded-xl object-cover mb-4">
-      <h2 class="text-lg font-semibold text-gray-700">گل آلاله</h2>
-    </div>
+    <div class="plants-list">
+  <div class="plant-item">
+    <img src="assets/img/aros.jpg.jpg" alt="عروس برگ مشکی" class="rounded-lg shadow-md" />
+    <p>عروس برگ مشکی</p>
   </div>
+  <div class="plant-item">
+    <img src="assets/img/naz.jpg.jpg" alt="نازبو" class="rounded-lg shadow-md" />
+    <p>نازبو</p>
+  </div>
+  <div class="plant-item">
+    <img src="assets/img/alale.jpg.jpg" alt="گل آلاله" class="rounded-lg shadow-md" />
+    <p>گل آلاله</p>
+  </div>
+</div>
 
   <script>
     function selectPlant(plantName) {
