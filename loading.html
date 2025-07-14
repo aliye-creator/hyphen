@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>در حال آماده‌سازی گلدون تو :seedling:</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fdf6f0, #f0f8ff);
+      font-family: 'Vazir', sans-serif;
+    }
+    .bounce {
+      animation: bounce 1.5s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    .plant-emoji {
+      font-size: 3rem;
+      animation: grow 2s infinite alternate;
+    }
+    @keyframes grow {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-center p-6">
+  <div class="flex items-center space-x-4 space-x-reverse mb-6">
+    <div class="plant-emoji">:herb:</div>
+    <div class="plant-emoji">🪴</div>
+    <div class="plant-emoji">:seedling:</div>
+  </div>
+
+  <h1 class="text-2xl font-bold text-pink-600 mb-2 bounce">در حال آماده‌سازی گلدون هوشمندت...</h1>
+  <p class="text-gray-600 text-sm mb-4">ماژول‌ها دارن با هم آشنا می‌شن! لطفاً یه کوچولو صبر کن :blush:</p>
+  <p class="text-xs text-gray-400">:hourglass_flowing_sand: ممکنه این مرحله چند ثانیه تا حتی یک دقیقه طول بکشه</p>
+
+  <div class="w-full max-w-md mt-6">
+    <div class="w-full bg-pink-100 rounded-full h-3 overflow-hidden">
+      <div class="bg-pink-500 h-full animate-pulse" style="width: 75%"></div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 6000);
+  </script>
+</body>
+</html>
+
