@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>داشبورد گیاه من</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fdf6f0, #f0f8ff);
+      font-family: 'Vazir', sans-serif;
+    }
+    .card {
+      @apply bg-white rounded-2xl shadow-md p-4 flex flex-col items-center justify-center;
+    }
+  </style>
+</head>
+<body class="min-h-screen p-6 flex flex-col items-center">
+  <h1 class="text-2xl font-bold text-pink-600 mb-4">:blossom: داشبورد گیاه من</h1>
+  <h2 id="plant-name" class="text-md text-gray-600 mb-6">در حال بارگذاری...</h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+    <div class="card">
+      <span class="text-4xl">🌡</span>
+      <p class="mt-2 text-sm text-gray-700">دما</p>
+      <p id="temp" class="font-bold text-lg">-- °C</p>
+    </div>
+    <div class="card">
+      <span class="text-4xl">:droplet:</span>
+      <p class="mt-2 text-sm text-gray-700">رطوبت هوا</p>
+      <p id="humidity" class="font-bold text-lg">-- %</p>
+    </div>
+    <div class="card">
+      <span class="text-4xl">:sun_with_face:</span>
+      <p class="mt-2 text-sm text-gray-700">نور</p>
+      <p id="light" class="font-bold text-lg">-- lux</p>
+    </div>
+    <div class="card">
+      <span class="text-4xl">:seedling:</span>
+      <p class="mt-2 text-sm text-gray-700">رطوبت خاک</p>
+      <p id="soil" class="font-bold text-lg">-- %</p>
+    </div>
+  </div>
+
+  <script src="js/plants.js"></script>
+  <script>
+    const plantName = localStorage.getItem('selectedPlant') || 'گیاه ناشناس';
+    document.getElementById('plant-name').textContent = 🌿 ${plantName};
+
+    // داده فرضی موقتی (به‌جای اتصال به دستگاه)
+    const data = {
+      temperature: 24,
+      humidity: 60,
+      light: 300,
+      soil: 45
+    };
+
+    document.getElementById('temp').textContent = data.temperature + ' °C';
+    document.getElementById('humidity').textContent = data.humidity + ' %';
+    document.getElementById('light').textContent = data.light + ' lux';
+    document.getElementById('soil').textContent = data.soil + ' %';
+  </script>
+</body>
+</html>
+
